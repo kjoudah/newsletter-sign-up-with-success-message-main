@@ -76,7 +76,8 @@ ul {
 
 :root {
   --tomato: hsl(4, 100%, 67%);
-
+  --tomato-light: hsla(4, 100%, 67%, 0.25);
+  --pink: hsl(348, 100%, 66%);
   --dark-grey: hsl(234, 29%, 20%);
   --charcoal-grey: hsl(235, 18%, 26%);
   --grey: hsl(231, 7%, 60%);
@@ -84,9 +85,26 @@ ul {
 
   --weight-normal: 400;
   --weight-bold: 700;
+
+  --font-small: clamp(0.69rem, calc(0.66rem + 0.16vw), 0.8rem);
+  --font-medium: clamp(1rem, calc(0.91rem + 0.38vw), 1.25rem);
+  --step-1: clamp(1.2rem, calc(1.07rem + 0.54vw), 1.56rem);
+  --step-2: clamp(1.44rem, calc(1.26rem + 0.77vw), 1.95rem);
+  --step-3: clamp(1.73rem, calc(1.48rem + 1.07vw), 2.44rem);
+  --step-4: clamp(2.07rem, calc(1.73rem + 1.47vw), 3.05rem);
+  --font-large: clamp(2.49rem, calc(2.02rem + 1.99vw), 3.82rem);
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: var(--charcoal-grey);
+}
+
+.hidden {
+  opacity: 0;
+  display: none;
 }
